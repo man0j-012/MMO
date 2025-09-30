@@ -1,6 +1,6 @@
 # Distributed Multicast MMO Server – System Design and Scalability (C++17)
 
-This is a **clean, upload-ready** starter implementation for your repo **`man0j-012/MMO`**.
+This is a **clean, upload-ready** starter implementation for  repo **`man0j-012/MMO`**.
 It demonstrates a scalable architecture with:
 
 - **Boost.Asio (TCP)** for client sessions
