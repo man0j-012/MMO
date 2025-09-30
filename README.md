@@ -9,7 +9,6 @@ It demonstrates a scalable architecture with:
 - **CMake** build, **Docker** image, **Docker Swarm** stack
 - **Load generator** to hit 1000s of lightweight simulated clients (threads or async)
 
-> Goal: Give you a minimal, *buildable* baseline that matches your resume bullets and lets you iterate.
 
 ---
 
@@ -95,11 +94,5 @@ scripts/            # helper scripts
 ```
 
 ---
-
-## Notes
-
-- This is intentionally **compact** and **readable**. Replace the world loop with your ECS/zone logic.
-- Multicast JSON payload is tiny, designed for high-rate updates without backpressure.
-- Locking, region-splits, failover, and AOI can be layered on top of this skeleton.
 
 MIT License.
