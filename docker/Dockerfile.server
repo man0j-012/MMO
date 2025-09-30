@@ -1,0 +1,9 @@
+FROM ubuntu:22.04
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential cmake libboost-all-dev \
+ && rm -rf /var/lib/apt/lists/*
+WORKDIR /app
+COPY . .
+RUN mkdir -p build && cd build && cmake .. -DCMAKE_BUILD_TYPE=Release -DBUILD_GUI=OFF && cmake --build . -j
+EXPOSE 4000/udp 4000/tcp 30001/udp
+ENTRYPOINT ["./build/src/server/mmo_server","--tcp","4000","--mgroup","239.255.0.1","--mport","30001","--iface","0.0.0.0"]

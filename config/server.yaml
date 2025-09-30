@@ -1,0 +1,5 @@
+tcp_port: 4000
+multicast_group: 239.255.0.1
+multicast_port: 30001
+multicast_iface: 0.0.0.0
+tick_hz: 20
